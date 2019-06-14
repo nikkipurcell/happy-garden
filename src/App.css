@@ -1,15 +1,21 @@
-.App {
+h1,
+h2 {
+  font-family: "Open Sans", sans-serif;
+  color: #90ad7e;
+  margin: 0;
+}
+h2 {
+  font-size: 20px;
+  color: #5a8241;
+  padding-bottom: 20px;
+}
+
+.app {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  background-color: #172722;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,17 +23,125 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion {
+  background-color: #1f362a;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "Italianno", cursive;
+  font-weight: normal;
+  font-size: 3.5em;
+  position: relative;
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.panel {
+  padding: 0 18px 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.active + .panel {
+  max-height: 100vh;
+}
+
+.panel li {
+  text-align: left;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.circleBase {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  background: #4b901f;
+  border: 5px solid #172722;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Colors */
+
+.blue .circleBase {
+  background: #26a5e5;
+}
+.yellow .circleBase {
+  background: #ffd600;
+}
+.orange .circleBase {
+  background: #ff7c00;
+}
+.red .circleBase {
+  background: #ff0000;
+}
+
+.accordion.blue {
+  background: #27414e;
+}
+.accordion.yellow {
+  background: #9c8606;
+}
+.accordion.orange {
+  background: #803f01;
+}
+.accordion.red {
+  /* background: #860b0b; */
+  background: #770c0c;
+}
+
+.blue.accordion.active,
+.blue.accordion:hover {
+  /* background-color: #a93939; */
+  background-color: #30647d;
+}
+.green.accordion.active,
+.green.accordion:hover {
+  /* background-color: #a93939; */
+  background-color: #254233;
+}
+.yellow.accordion.active,
+.yellow.accordion:hover {
+  /* background-color: #a93939; */
+  background-color: #ceaa00;
+}
+.orange.accordion.active,
+.orange.accordion:hover {
+  /* background-color: #a93939; */
+  background-color: #a95802;
+}
+.red.accordion.active,
+.red.accordion:hover {
+  /* background-color: #a93939; */
+  background-color: #a90000;
+}
+
+.blue + .panel {
+  color: #81a2b7;
+}
+.green + .panel {
+  color: #618a47;
+}
+.yellow + .panel {
+  color: #b8bb5a;
+}
+.orange + .panel {
+  color: #de9545;
+}
+.red + .panel {
+  color: #dc655c;
 }
