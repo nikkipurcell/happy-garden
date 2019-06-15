@@ -10,6 +10,10 @@ h2 {
   padding-bottom: 20px;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .app {
   text-align: center;
 }
@@ -53,7 +57,7 @@ h2 {
 
 .panel li {
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   padding: 5px 0;
 }
 
