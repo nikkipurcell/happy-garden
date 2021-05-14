@@ -6,7 +6,7 @@ class Accordion extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false
+      active: false,
     };
   }
 
@@ -36,20 +36,26 @@ class Accordion extends React.Component {
           <span className="circleBase" />
         </button>
         <div className="panel">
-          <ul>
-            {item.tasks.map((task, i) => (
-              <React.Fragment key={i}>
-                <li>{task.text}</li>
-                {task.subtasks && (
-                  <ul>
-                    {task.subtasks.map((subtask, j) => (
-                      <li key={j}>{subtask}</li>
-                    ))}
-                  </ul>
-                )}
-              </React.Fragment>
-            ))}
-          </ul>
+          {item.flowers && (
+            <>
+              <h2>FLOWERS</h2>
+              <ul>
+                {item.flowers.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
+              </ul>
+            </>
+          )}
+          {item.lawn && item.lawn.length !== 0 && (
+            <>
+              <h2>LAWN</h2>
+              <ul>
+                {item.lawn.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
       </React.Fragment>
     );
