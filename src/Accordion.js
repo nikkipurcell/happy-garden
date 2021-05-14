@@ -38,7 +38,7 @@ class Accordion extends React.Component {
         <div className="panel">
           {item.flowers && (
             <>
-              <h2>FLOWERS</h2>
+              <h3>FLOWERS</h3>
               <ul>
                 {item.flowers.map((task, i) => (
                   <li key={i}>{task}</li>
@@ -48,7 +48,7 @@ class Accordion extends React.Component {
           )}
           {item.lawn && item.lawn.length !== 0 && (
             <>
-              <h2>LAWN</h2>
+              <h3>LAWN</h3>
               <ul>
                 {item.lawn.map((task, i) => (
                   <li key={i}>{task}</li>
